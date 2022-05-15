@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>My Potato Site</title>
+</head>
+
+<body>
+    <a name="pocetak"></a>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="blue.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">FD Tools</span>
+                    <span class="profession">Praktikum</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt icon' onclick="ucitajPrimjer('primjer1')"></i>
+                            <span class="text nav-text" onclick="ucitajPrimjer('primjer1')">Primjer 1</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt icon' onclick="ucitajPrimjer('primjer2')"></i>
+                            <span class="text nav-text" onclick="ucitajPrimjer('primjer2')">Primjer 2</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt icon' onclick="ucitajPrimjer('primjer3')"></i>
+                            <span class="text nav-text" onclick="ucitajPrimjer('primjer3')">Primjer 3</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt icon' onclick="ucitajPrimjer('primjer4')"></i>
+                            <span class="text nav-text" onclick="ucitajPrimjer('primjer4')">Primjer 4</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt icon' onclick="ucitajPrimjer('primjer5')"></i>
+                            <span class="text nav-text" onclick="ucitajPrimjer('primjer5')">Primjer 5</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt icon' onclick="ucitajPrimjer('primjer6')"></i>
+                            <span class="text nav-text" onclick="ucitajPrimjer('primjer6')">Primjer 6</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-edit-alt icon' onclick="ucitajPrimjer('primjer7')"></i>
+                            <span class="text nav-text" onclick="ucitajPrimjer('primjer7')">Primjer 7</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-key icon' onclick="provjeriKljuceve()"></i>
+                            <span class="text nav-text" onclick="provjeriKljuceve()">Primarni Ključ</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-table icon' onclick="provjeriNormalnuFormu()"></i>
+                            <span class="text nav-text" onclick="provjeriNormalnuFormu()">Normalna Forma</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-reset icon' onclick="resetiraj()"></i>
+                            <span class="text nav-text" onclick="resetiraj()">Reset</span>
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Functional Dependency Tools</div>
+        <form>
+
+            <span class="bold">Relacija</span><br>
+            <input type="text" placeholder="Primjer unosa : A B C D E" id="unos-atributa" class="unos-atributa"><br>
+            <span class="bold">Funkcionalne ovisnosti</span><br>
+            <span id="unos-forma" class="unos-forma"></span>
+            <button type="button" onclick="unosFO()">Dodaj FO</button>
+            <button type="button" onclick="provjeriKljuceve()">Pronađi PK</button>
+            <button type="button" onclick="provjeriNormalnuFormu()">Provjera NF</button>
+            <button type="button" onclick="resetiraj()">Reset</button>
+        </form>
+        <div id="KandidatiField" class="lists"></div>
+        <div id="NormalFormField" class="NormalFormField"></div>
+
+        <span id="check_normal_form_field"></span>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="fds.js"></script>
+
+</body>
+
+</html>
